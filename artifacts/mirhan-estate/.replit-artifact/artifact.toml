@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Mirhan Gayrimenkul"
+version = "1.0.0"
+id = "artifacts/mirhan-estate"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22990
+
+[services.development]
+run = "pnpm --filter @workspace/mirhan-estate run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mirhan-estate", "run", "build" ]
+publicDir = "artifacts/mirhan-estate/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22990"
+BASE_PATH = "/"

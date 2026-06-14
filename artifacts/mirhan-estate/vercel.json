@@ -1,0 +1,26 @@
+{
+  "buildCommand": "pnpm install --frozen-lockfile=false && pnpm run build:vercel",
+  "outputDirectory": "dist",
+  "installCommand": "pnpm install --frozen-lockfile=false",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://YOUR_RAILWAY_BACKEND_URL/api/:path*"
+    },
+    {
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/logo-mirhan.jpeg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}
