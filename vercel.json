@@ -2,10 +2,10 @@
   "buildCommand": "pnpm install --frozen-lockfile=false && pnpm --filter @workspace/api-server run build:serverless && pnpm --filter @workspace/mirhan-estate run build:vercel",
   "outputDirectory": "artifacts/mirhan-estate/dist",
   "installCommand": "pnpm install --frozen-lockfile=false",
+  "nodeVersion": "22.x",
   "functions": {
     "api/index.js": {
-      "maxDuration": 60,
-      "runtime": "nodejs22.x"
+      "maxDuration": 60
     }
   },
   "rewrites": [
