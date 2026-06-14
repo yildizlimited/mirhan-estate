@@ -16,7 +16,7 @@ router.get("/agents/me", requireAuth, async (req, res) => {
 });
 
 router.get("/agents/:id", async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const agent = await storage.getAgent(id);
   if (!agent) return res.status(404).json({ message: "Ajan bulunamadı" });
@@ -29,7 +29,7 @@ router.post("/agents", requireRole("admin"), async (req, res) => {
 });
 
 router.patch("/agents/:id", requireRole("agent", "admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const userRole = req.session.userRole;
   const myAgent = await storage.getAgentByUserId(req.session.userId!);
@@ -42,7 +42,7 @@ router.patch("/agents/:id", requireRole("agent", "admin"), async (req, res) => {
 });
 
 router.get("/agents/:id/properties", async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const props = await storage.getPropertiesByAgent(id);
   return res.json(props);

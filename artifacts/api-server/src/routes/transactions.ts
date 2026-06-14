@@ -43,7 +43,7 @@ router.post("/transactions", requireRole("agent", "admin"), async (req, res) => 
 });
 
 router.patch("/transactions/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const updated = await storage.updateTransactionStatus(id, req.body.status);
   if (!updated) return res.status(404).json({ message: "İşlem bulunamadı" });

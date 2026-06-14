@@ -27,7 +27,7 @@ router.post("/messages", requireAuth, async (req, res) => {
 });
 
 router.patch("/messages/:id/read", requireAuth, async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.markMessageRead(id);
   return res.json({ ok: true });

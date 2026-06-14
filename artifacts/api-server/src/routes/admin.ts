@@ -12,7 +12,7 @@ router.get("/admin/users", requireRole("admin"), async (_req, res) => {
 });
 
 router.patch("/admin/users/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const { name, email, role, phone } = req.body;
   const updated = await storage.updateUser(id, { name, email, role, phone });
@@ -22,14 +22,14 @@ router.patch("/admin/users/:id", requireRole("admin"), async (req, res) => {
 });
 
 router.delete("/admin/users/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.deleteUser(id);
   return res.json({ ok: true });
 });
 
 router.patch("/admin/properties/:id/approve", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const updated = await storage.updateProperty(id, { approved: true });
   if (!updated) return res.status(404).json({ message: "İlan bulunamadı" });
@@ -37,7 +37,7 @@ router.patch("/admin/properties/:id/approve", requireRole("admin"), async (req, 
 });
 
 router.patch("/admin/properties/:id/reject", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const updated = await storage.updateProperty(id, { approved: false });
   if (!updated) return res.status(404).json({ message: "İlan bulunamadı" });

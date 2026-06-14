@@ -20,7 +20,7 @@ router.post("/team", requireRole("admin"), async (req, res) => {
 });
 
 router.patch("/team/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const updated = await storage.updateTeamMember(id, req.body);
   if (!updated) return res.status(404).json({ message: "Üye bulunamadı" });
@@ -28,7 +28,7 @@ router.patch("/team/:id", requireRole("admin"), async (req, res) => {
 });
 
 router.delete("/team/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.deleteTeamMember(id);
   return res.json({ ok: true });

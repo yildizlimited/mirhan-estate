@@ -10,7 +10,7 @@ router.get("/favorites", requireAuth, async (req, res) => {
 });
 
 router.post("/favorites/:propertyId", requireAuth, async (req, res) => {
-  const propertyId = parseInt(req.params.propertyId);
+  const propertyId = parseInt(String(req.params.propertyId));
   if (isNaN(propertyId)) return res.status(400).json({ message: "Geçersiz ID" });
   const userId = req.session.userId!;
   const already = await storage.isFavorite(userId, propertyId);
@@ -23,7 +23,7 @@ router.post("/favorites/:propertyId", requireAuth, async (req, res) => {
 });
 
 router.delete("/favorites/:propertyId", requireAuth, async (req, res) => {
-  const propertyId = parseInt(req.params.propertyId);
+  const propertyId = parseInt(String(req.params.propertyId));
   if (isNaN(propertyId)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.removeFavorite(req.session.userId!, propertyId);
   return res.json({ ok: true });

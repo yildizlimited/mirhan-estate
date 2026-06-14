@@ -16,7 +16,7 @@ router.get("/blog/all", requireRole("admin", "agent"), async (_req, res) => {
 });
 
 router.get("/blog/:slug", async (req, res) => {
-  const post = await storage.getBlogPostBySlug(req.params.slug);
+  const post = await storage.getBlogPostBySlug(String(req.params.slug));
   if (!post) return res.status(404).json({ message: "Yazı bulunamadı" });
   return res.json(post);
 });
@@ -33,7 +33,7 @@ router.post("/blog", requireRole("admin", "agent"), async (req, res) => {
 });
 
 router.patch("/blog/:id", requireRole("admin", "agent"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const updated = await storage.updateBlogPost(id, req.body);
   if (!updated) return res.status(404).json({ message: "Yazı bulunamadı" });
@@ -41,7 +41,7 @@ router.patch("/blog/:id", requireRole("admin", "agent"), async (req, res) => {
 });
 
 router.delete("/blog/:id", requireRole("admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.deleteBlogPost(id);
   return res.json({ ok: true });

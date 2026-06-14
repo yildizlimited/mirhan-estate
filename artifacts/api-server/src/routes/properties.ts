@@ -62,7 +62,7 @@ router.post("/properties", requireRole("agent", "admin"), async (req, res) => {
 });
 
 router.patch("/properties/:id", requireRole("agent", "admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const existing = await storage.getProperty(id);
   if (!existing) return res.status(404).json({ message: "İlan bulunamadı" });
@@ -78,7 +78,7 @@ router.patch("/properties/:id", requireRole("agent", "admin"), async (req, res) 
 });
 
 router.delete("/properties/:id", requireRole("agent", "admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const existing = await storage.getProperty(id);
   if (!existing) return res.status(404).json({ message: "İlan bulunamadı" });
@@ -94,7 +94,7 @@ router.delete("/properties/:id", requireRole("agent", "admin"), async (req, res)
 });
 
 router.post("/properties/:id/images", requireRole("agent", "admin"), async (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(String(req.params.id));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   const { imageUrl, isPrimary } = req.body;
   if (!imageUrl) return res.status(400).json({ message: "Resim URL gerekli" });
@@ -103,7 +103,7 @@ router.post("/properties/:id/images", requireRole("agent", "admin"), async (req,
 });
 
 router.delete("/properties/images/:imageId", requireRole("agent", "admin"), async (req, res) => {
-  const id = parseInt(req.params.imageId);
+  const id = parseInt(String(req.params.imageId));
   if (isNaN(id)) return res.status(400).json({ message: "Geçersiz ID" });
   await storage.deletePropertyImage(id);
   return res.json({ ok: true });
