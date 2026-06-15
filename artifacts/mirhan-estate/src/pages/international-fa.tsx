@@ -98,22 +98,22 @@ export default function InternationalFaPage() {
             <h2 className="text-2xl font-bold">تماس با ما</h2>
             <p className="text-muted-foreground">مشاور فارسی‌زبان ما آماده پاسخگویی به سوالات شما است</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/905321234567?text=سلام%2C%20می‌خواهم%20درباره%20خرید%20ملک%20در%20استانبول%20بدانم." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/905494492336?text=سلام%2C%20می‌خواهم%20درباره%20خرید%20ملک%20در%20استانبول%20بدانم." target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   <SiWhatsapp className="w-5 h-5 mr-2" />
                   واتساپ
                 </Button>
               </a>
-              <a href="https://t.me/+905321234567" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/+905494492336" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-sky-500 hover:bg-sky-600 text-white">
                   <SiTelegram className="w-5 h-5 mr-2" />
                   تلگرام
                 </Button>
               </a>
-              <a href="tel:+905321234567">
+              <a href="tel:+905494492336">
                 <Button size="lg" variant="outline">
                   <Phone className="w-5 h-5 mr-2" />
-                  +90 532 123 45 67
+                  +90 549 449 23 36
                 </Button>
               </a>
             </div>

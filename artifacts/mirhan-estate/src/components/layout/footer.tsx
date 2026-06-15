@@ -22,7 +22,7 @@ export function Footer() {
               İstanbul'da güvenilir emlak danışmanlığı ile hayalinizdeki evi bulmanıza yardımcı oluyoruz.
             </p>
             <a
-              href="https://wa.me/905321234567"
+              href="https://wa.me/905494492336"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
@@ -77,9 +77,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+905321234567" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+905494492336" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  +90 532 123 45 67
+                  +90 549 449 23 36
                 </a>
               </li>
               <li>

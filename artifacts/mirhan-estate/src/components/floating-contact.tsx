@@ -10,19 +10,19 @@ export function FloatingContact() {
       label: "WhatsApp",
       icon: <SiWhatsapp className="w-6 h-6 text-white" />,
       bg: "bg-emerald-500 hover:bg-emerald-600",
-      href: "https://wa.me/905321234567?text=Merhaba%2C%20bilgi%20almak%20istiyorum.",
+      href: "https://wa.me/905494492336?text=Merhaba%2C%20bilgi%20almak%20istiyorum.",
     },
     {
       label: "Şimdi Arayın",
       icon: <Phone className="w-6 h-6 text-white" />,
       bg: "bg-blue-500 hover:bg-blue-600",
-      href: "tel:+905321234567",
+      href: "tel:+905494492336",
     },
     {
       label: "Telegram",
       icon: <SiTelegram className="w-6 h-6 text-white" />,
       bg: "bg-sky-400 hover:bg-sky-500",
-      href: "https://t.me/+905321234567",
+      href: "https://t.me/+905494492336",
     },
     {
       label: "Ofisi Arayın",

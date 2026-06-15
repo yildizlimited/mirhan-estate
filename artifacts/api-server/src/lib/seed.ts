@@ -31,14 +31,14 @@ export async function seedDatabase() {
   const agent1 = await storage.createAgent({
     userId: agentUser1.id,
     companyName: "Mirhan Gayrimenkul",
-    phone: "+90 532 111 2233",
+    phone: "+90 549 449 23 36",
     description: "15 yıllık tecrübesiyle İstanbul'da emlak danışmanlığı yapmaktadır.",
   });
 
   const agent2 = await storage.createAgent({
     userId: agentUser2.id,
     companyName: "Mirhan Gayrimenkul",
-    phone: "+90 533 444 5566",
+    phone: "+90 549 449 23 36",
     description: "Beşiktaş, Kadıköy ve Sarıyer bölgelerinde lüks konut satışında uzmanlaşmıştır.",
   });
 
@@ -250,5 +250,80 @@ export async function seedDatabase() {
     seoDescription: "İstanbul'da gayrimenkul yatırımı için en iyi semtler. Bölge bazlı analiz ve fiyat değerlendirmeleri.",
     published: true,
     authorId: admin.id,
+  });
+
+  await storage.createTeamMember({
+    name: "Ahmet Yılmaz",
+    title: "Kıdemli Emlak Danışmanı",
+    phone: "+90 549 449 23 36",
+    email: "ahmet@mirhanestate.com",
+    description: "15 yıllık tecrübesiyle İstanbul'da Beşiktaş, Sarıyer ve Kadıköy bölgelerinde lüks konut satışında uzmanlaşmıştır. Boğaz manzaralı villa ve rezidans projeleri konusunda derin bilgiye sahiptir.",
+    specialty: ["Konut", "Villa", "Yabancı Müşteri"],
+    experience: 15,
+    languages: ["Türkçe", "İngilizce", "Rusça"],
+    rating: "4.9",
+    reviewCount: 87,
+    sortOrder: 1,
+    active: true,
+  });
+
+  await storage.createTeamMember({
+    name: "Elif Kaya",
+    title: "Emlak Danışmanı",
+    phone: "+90 549 449 23 36",
+    email: "elif@mirhanestate.com",
+    description: "Beşiktaş, Kadıköy ve Sarıyer bölgelerinde lüks konut satışında uzmanlaşmıştır. Yabancı yatırımcılara Türkiye'de gayrimenkul edinimi konusunda kapsamlı danışmanlık sunmaktadır.",
+    specialty: ["Konut", "Yabancı Müşteri"],
+    experience: 8,
+    languages: ["Türkçe", "İngilizce", "Arapça"],
+    rating: "4.8",
+    reviewCount: 54,
+    sortOrder: 2,
+    active: true,
+  });
+
+  await storage.createTeamMember({
+    name: "Murat Demir",
+    title: "Ticari Gayrimenkul Uzmanı",
+    phone: "+90 549 449 23 36",
+    email: "murat@mirhanestate.com",
+    description: "Şişli, Levent ve Maslak bölgelerinde ofis ve ticari gayrimenkul danışmanlığı yapmaktadır. İstanbul Finans Merkezi projelerinde uzman rehberlik sunmaktadır.",
+    specialty: ["Ticari Gayrimenkul", "Konut"],
+    experience: 12,
+    languages: ["Türkçe", "İngilizce"],
+    rating: "4.7",
+    reviewCount: 41,
+    sortOrder: 3,
+    active: true,
+  });
+
+  await storage.createTeamMember({
+    name: "Selin Arslan",
+    title: "Kiralık Konut Uzmanı",
+    phone: "+90 549 449 23 36",
+    email: "selin@mirhanestate.com",
+    description: "Avrupa ve Anadolu Yakası'nda kiralık daire ve rezidans konusunda uzmanlaşmıştır. Öğrenci ve genç profesyonellere uygun çözümler üretmektedir.",
+    specialty: ["Konut"],
+    experience: 5,
+    languages: ["Türkçe", "Almanca"],
+    rating: "4.6",
+    reviewCount: 29,
+    sortOrder: 4,
+    active: true,
+  });
+
+  await storage.createTeamMember({
+    name: "Kemal Şahin",
+    title: "Arsa ve Yatırım Danışmanı",
+    phone: "+90 549 449 23 36",
+    email: "kemal@mirhanestate.com",
+    description: "İstanbul'un gelişen bölgelerinde arsa ve yatırım amaçlı gayrimenkul danışmanlığı yapmaktadır. Kentsel dönüşüm projeleri konusunda deneyimlidir.",
+    specialty: ["Arsa", "Konut"],
+    experience: 10,
+    languages: ["Türkçe", "İngilizce"],
+    rating: "4.8",
+    reviewCount: 63,
+    sortOrder: 5,
+    active: true,
   });
 }

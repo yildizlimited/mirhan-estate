@@ -100,7 +100,7 @@ export default function CitySeoPage() {
               "@type": "RealEstateAgent",
               name: "Mirhan Gayrimenkul",
               url: "https://mirhanestate.com",
-              telephone: "+905321234567",
+              telephone: "+905494492336",
               areaServed: { "@type": "City", name: "İstanbul" },
             },
           }),
@@ -170,7 +170,7 @@ export default function CitySeoPage() {
             {seoPage.district ? `${seoPage.district}'da` : "İstanbul'da"} mülk almak veya kiralamak için ücretsiz danışmanlık hizmeti alın.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="https://wa.me/905321234567" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905494492336" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                 <SiWhatsapp className="w-5 h-5 mr-2" />WhatsApp
               </Button>

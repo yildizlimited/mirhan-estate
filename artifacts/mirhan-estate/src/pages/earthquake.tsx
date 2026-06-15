@@ -126,7 +126,7 @@ export default function EarthquakePage() {
             İstanbul'da güvenli, değeri artacak bir mülk almak için Mirhan Gayrimenkul uzmanlarından destek alın.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/905321234567" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905494492336" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                 <SiWhatsapp className="w-5 h-5 mr-2" />
                 WhatsApp Danışmanlık

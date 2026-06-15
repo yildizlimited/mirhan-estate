@@ -240,7 +240,7 @@ export default function PropertyDetailPage() {
           <div className="space-y-6">
             <div className="sticky top-24 space-y-6">
               {property.agent && (() => {
-                const agentPhone = property.agent.phone || "+905321234567";
+                const agentPhone = property.agent.phone || "+905494492336";
                 const agentEmail = property.agent.user?.email || "info@mirhanestate.com";
                 const agentName = property.agent.user?.name || "Danışman";
                 const agentInitials = agentName.split(" ").map((n: string) => n.charAt(0)).join("").slice(0, 2);

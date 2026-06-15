@@ -101,7 +101,7 @@ export default function HomePage() {
             name: "Mirhan Gayrimenkul",
             description: "İstanbul'da satılık ve kiralık emlak ilanları. Beşiktaş, Kadıköy, Sarıyer, Şişli, Üsküdar bölgelerinde güvenilir emlak danışmanlığı.",
             url: "https://mirhanestate.com",
-            telephone: ["+905321234567", "+902121234567"],
+            telephone: ["+905494492336", "+902121234567"],
             email: "info@mirhanestate.com",
             areaServed: {
               "@type": "City",
@@ -431,7 +431,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/905321234567?text=Merhaba%2C%20İstanbul'da%20emlak%20hakkında%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/905494492336?text=Merhaba%2C%20İstanbul'da%20emlak%20hakkında%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -440,7 +440,7 @@ export default function HomePage() {
                 WhatsApp Danışmanlık
               </Button>
             </a>
-            <a href="tel:+905321234567">
+            <a href="tel:+905494492336">
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 <Phone className="w-5 h-5 mr-2" />
                 Hemen Arayın

@@ -120,16 +120,16 @@ export default function BuyingGuidePage() {
           <h2 className="text-2xl font-bold mb-4">Uzman Desteği Alın</h2>
           <p className="text-muted-foreground mb-8">Mirhan Gayrimenkul danışmanları, İstanbul'da ev satın alma sürecinin her aşamasında yanınızda.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/905321234567?text=Merhaba%2C%20İstanbul'da%20ev%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905494492336?text=Merhaba%2C%20İstanbul'da%20ev%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                 <SiWhatsapp className="w-5 h-5 mr-2" />
                 WhatsApp Danışmanlık
               </Button>
             </a>
-            <a href="tel:+905321234567">
+            <a href="tel:+905494492336">
               <Button size="lg" variant="outline">
                 <Phone className="w-5 h-5 mr-2" />
-                +90 532 123 45 67
+                +90 549 449 23 36
               </Button>
             </a>
           </div>

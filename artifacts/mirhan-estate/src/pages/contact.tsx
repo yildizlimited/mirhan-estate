@@ -65,8 +65,8 @@ export default function ContactPage() {
                 {
                   icon: Phone,
                   title: "Telefon",
-                  lines: ["+90 532 123 45 67 (Mobil)", "+90 212 123 45 67 (Ofis)"],
-                  link: "tel:+905321234567",
+                  lines: ["+90 549 449 23 36 (Mobil)", "+90 212 123 45 67 (Ofis)"],
+                  link: "tel:+905494492336",
                 },
                 {
                   icon: Mail,
@@ -96,7 +96,7 @@ export default function ContactPage() {
               ))}
 
               <a
-                href="https://wa.me/905321234567?text=Merhaba%2C%20İstanbul'da%20emlak%20hakkında%20bilgi%20almak%20istiyorum."
+                href="https://wa.me/905494492336?text=Merhaba%2C%20İstanbul'da%20emlak%20hakkında%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="link-whatsapp-contact"
