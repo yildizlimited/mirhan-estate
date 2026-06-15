@@ -168,6 +168,33 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto mb-8">
+        <h2 className="text-xl font-bold mb-4 text-center" data-testid="text-map-title">Ofisimizin Konumu</h2>
+        <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.6!2d28.9985!3d41.0475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAyJzUxLjAiTiAyOMKwNTknNTQuNiJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str&q=Nişantaşı+Şişli+İstanbul"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Mirhan Gayrimenkul Ofis Konumu - Nişantaşı, Şişli/İstanbul"
+            data-testid="map-office-location"
+          />
+        </div>
+        <p className="text-sm text-muted-foreground text-center mt-3">
+          Nişantaşı, Şişli/İstanbul
+        </p>
+      </section>
+
+      <section className="text-center bg-card rounded-xl border border-border p-8 mx-4 sm:mx-6 lg:mx-8 max-w-5xl lg:mx-auto mb-12" data-testid="section-contact-seo">
+        <h2 className="text-xl font-bold mb-3">İstanbul'da Gayrimenkul Danışmanlığı</h2>
+        <p className="text-muted-foreground max-w-lg mx-auto">
+          Satılık veya kiralık mülk mü arıyorsunuz? Mülkünüzü satmak veya kiralamak mı istiyorsunuz? Mirhan Gayrimenkul olarak İstanbul'un tüm bölgelerinde — Beşiktaş, Kadıköy, Sarıyer, Şişli, Üsküdar, Ataşehir — profesyonel emlak danışmanlığı hizmeti sunuyoruz.
+        </p>
+      </section>
+
       <Footer />
     </div>
   );

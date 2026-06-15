@@ -423,6 +423,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-12 bg-muted/30" data-testid="section-seo-links">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold mb-6 text-center">Popüler Aramalar</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+            {[
+              { href: "/istanbul-satilik-daire", text: "İstanbul Satılık Daire" },
+              { href: "/istanbul-satilik-villa", text: "İstanbul Satılık Villa" },
+              { href: "/istanbul-kiralik-daire", text: "İstanbul Kiralık Daire" },
+              { href: "/istanbul-besiktas-satilik-daire", text: "Beşiktaş Satılık Daire" },
+              { href: "/istanbul-kadikoy-satilik-daire", text: "Kadıköy Satılık Daire" },
+              { href: "/istanbul-sisli-satilik-daire", text: "Şişli Satılık Daire" },
+              { href: "/istanbul-sariyer-satilik-daire", text: "Sarıyer Satılık Daire" },
+              { href: "/istanbul-atasehir-satilik-daire", text: "Ataşehir Satılık Daire" },
+              { href: "/istanbul-satilik-arsa", text: "İstanbul Satılık Arsa" },
+              { href: "/istanbul-besiktas-satilik-villa", text: "Beşiktaş Satılık Villa" },
+              { href: "/istanbul-kadikoy-kiralik-daire", text: "Kadıköy Kiralık Daire" },
+              { href: "/istanbul-sisli-satilik-villa", text: "Şişli Satılık Villa" },
+              { href: "/istanbul-levent-satilik-daire", text: "Levent Satılık Daire" },
+              { href: "/istanbul-satilik-ev", text: "İstanbul Satılık Ev" },
+              { href: "/istanbul-satilik-isyeri", text: "İstanbul Satılık İşyeri" },
+              { href: "/istanbul-emlak-rehberi", text: "İstanbul Emlak Rehberi" },
+              { href: "/istanbul-yatirim-bolgeleri", text: "Yatırım Bölgeleri" },
+              { href: "/istanbul-gayrimenkul-piyasasi", text: "Piyasa Analizi" },
+              { href: "/besiktas-emlak-rehberi", text: "Beşiktaş Emlak Rehberi" },
+              { href: "/kadikoy-emlak-rehberi", text: "Kadıköy Emlak Rehberi" },
+              { href: "/sariyer-emlak-rehberi", text: "Sarıyer Emlak Rehberi" },
+              { href: "/istanbul-emlak-sss", text: "Sıkça Sorulan Sorular" },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} data-testid={`link-popular-${link.href.slice(1)}`}>
+                <span className="block text-center px-3 py-2.5 rounded-lg bg-background border border-border text-sm hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:border-amber-300 transition-colors cursor-pointer">
+                  {link.text}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-card/50" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Hayalinizdeki İstanbul Mülkünü Bulalım</h2>
