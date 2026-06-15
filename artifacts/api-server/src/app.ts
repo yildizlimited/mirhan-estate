@@ -1,14 +1,12 @@
 import express, { type Express } from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import pinoHttp from "pino-http";
 import session from "express-session";
-import connectPgSimple from "connect-pg-simple";
-import { pool } from "@workspace/db";
+import { jwtMiddleware } from "./lib/auth";
 import router from "./routes";
 import { logger } from "./lib/logger";
 import { seedDatabase } from "./lib/seed";
-
-const PgSession = connectPgSimple(session);
 
 const app: Express = express();
 
@@ -32,8 +30,6 @@ app.use(
   }),
 );
 
-const isProduction = process.env.NODE_ENV === "production";
-
 app.set("trust proxy", 1);
 
 app.use(
@@ -44,25 +40,18 @@ app.use(
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.use(
   session({
-    store: new PgSession({
-      pool,
-      tableName: "session",
-      createTableIfMissing: true,
-    }),
     secret: process.env.SESSION_SECRET || "mirhan-secret-fallback",
     resave: false,
     saveUninitialized: false,
-    cookie: {
-      secure: isProduction,
-      httpOnly: true,
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-      sameSite: isProduction ? "none" : "lax",
-    },
+    store: undefined,
   }),
 );
+
+app.use(jwtMiddleware);
 
 app.use("/api", router);
 
