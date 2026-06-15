@@ -15,9 +15,10 @@ type SeoPage = {
 };
 
 type Property = {
-  id: number; title: string; price: string; district: string;
+  id: number; title: string; price: number; district: string; city: string;
   listingType: string; propertyType: string; rooms: string;
-  size?: number; images?: string[];
+  squareMeters: number; bathrooms: number; featured: boolean | null;
+  size?: number; images: { id: number; imageUrl: string; propertyId: number; isPrimary: boolean | null }[];
 };
 
 export default function CitySeoPage() {

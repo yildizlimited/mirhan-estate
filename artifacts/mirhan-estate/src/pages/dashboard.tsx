@@ -125,7 +125,7 @@ export default function DashboardPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold" data-testid="text-dashboard-title">Danışman Paneli</h1>
-            <p className="text-muted-foreground text-sm">Hoş geldiniz, {user.firstName}</p>
+            <p className="text-muted-foreground text-sm">Hoş geldiniz, {user.name}</p>
           </div>
           <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
