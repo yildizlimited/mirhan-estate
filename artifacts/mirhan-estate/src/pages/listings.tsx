@@ -104,7 +104,7 @@ export default function ListingsPage() {
     setActiveFilters(empty);
   };
 
-  const FilterPanel = () => (
+  const filterPanelJsx = (
     <div className="space-y-6">
       <div>
         <Label className="text-sm font-medium mb-2 block">İlan Tipi</Label>
@@ -259,7 +259,7 @@ export default function ListingsPage() {
                 <SheetTitle>Filtreler</SheetTitle>
               </SheetHeader>
               <div className="mt-6">
-                <FilterPanel />
+                {filterPanelJsx}
               </div>
             </SheetContent>
           </Sheet>
@@ -286,7 +286,7 @@ export default function ListingsPage() {
           <aside className="hidden lg:block w-72 flex-shrink-0">
             <div className="sticky top-24 bg-card rounded-xl border border-card-border p-5">
               <h2 className="font-semibold mb-4">Filtreler</h2>
-              <FilterPanel />
+              {filterPanelJsx}
             </div>
           </aside>
 
