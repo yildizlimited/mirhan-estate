@@ -32,11 +32,11 @@ export function Header() {
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center group" data-testid="link-home">
               <img
-                src="/logo-mirhan.jpeg"
+                src="/logo.png"
                 alt="Mirhan Gayrimenkul"
-                className="h-10 w-auto object-contain"
-                width={120}
-                height={40}
+                className="h-12 w-auto object-contain"
+                width={140}
+                height={48}
               />
             </Link>
 
@@ -138,7 +138,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-72">
                 <div className="flex items-center gap-2 mb-6 mt-2">
-                  <img src="/logo-mirhan.jpeg" alt="Mirhan Gayrimenkul" className="h-8 w-auto object-contain" />
+                  <img src="/logo.png" alt="Mirhan Gayrimenkul" className="h-10 w-auto object-contain" />
                 </div>
                 <nav className="flex flex-col gap-2">
                   {navLinks.map((link) => (

@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center">
-              <img src="/logo-mirhan.jpeg" alt="Mirhan Gayrimenkul" className="h-12 w-auto object-contain" />
+              <img src="/logo.png" alt="Mirhan Gayrimenkul" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               İstanbul'da güvenilir emlak danışmanlığı ile hayalinizdeki evi bulmanıza yardımcı oluyoruz.
