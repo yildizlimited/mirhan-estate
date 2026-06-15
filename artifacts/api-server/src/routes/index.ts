@@ -10,6 +10,7 @@ import transactionsRouter from "./transactions";
 import teamRouter from "./team";
 import seoRouter from "./seo";
 import adminRouter from "./admin";
+import agentDashboardRouter from "./agent-dashboard";
 
 const router: IRouter = Router();
 
@@ -24,5 +25,6 @@ router.use(transactionsRouter);
 router.use(teamRouter);
 router.use(seoRouter);
 router.use(adminRouter);
+router.use(agentDashboardRouter);
 
 export default router;

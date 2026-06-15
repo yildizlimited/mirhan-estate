@@ -38,8 +38,21 @@ router.get("/admin/users", requireRole("admin"), async (_req, res) => {
 router.post("/admin/users", requireRole("admin"), async (req, res) => {
   const { name, email, password, role, phone } = req.body;
   if (!name || !email || !password) return res.status(400).json({ message: "Ad, e-posta ve şifre zorunlu" });
+  const existing = await storage.getUserByEmail(email);
+  if (existing) return res.status(409).json({ message: "Bu e-posta zaten kayıtlı" });
   const hashed = await hashPassword(password);
   const user = await storage.createUser({ name, email, password: hashed, role: role || "user", phone });
+  if (role === "agent") {
+    const existingAgent = await storage.getAgentByUserId(user.id);
+    if (!existingAgent) {
+      await storage.createAgent({
+        userId: user.id,
+        companyName: "Mirhan Gayrimenkul",
+        phone: phone || "",
+        description: "",
+      });
+    }
+  }
   const { password: _p, ...safe } = user;
   return res.status(201).json(safe);
 });
@@ -50,6 +63,12 @@ router.put("/admin/users/:id", requireRole("admin"), async (req, res) => {
   const { name, email, role, phone } = req.body;
   const updated = await storage.updateUser(id, { name, email, role, phone });
   if (!updated) return res.status(404).json({ message: "Kullanıcı bulunamadı" });
+  if (role === "agent") {
+    const existingAgent = await storage.getAgentByUserId(id);
+    if (!existingAgent) {
+      await storage.createAgent({ userId: id, companyName: "Mirhan Gayrimenkul", phone: phone || "", description: "" });
+    }
+  }
   const { password: _p, ...safe } = updated;
   return res.json(safe);
 });
@@ -60,6 +79,12 @@ router.patch("/admin/users/:id", requireRole("admin"), async (req, res) => {
   const { name, email, role, phone } = req.body;
   const updated = await storage.updateUser(id, { name, email, role, phone });
   if (!updated) return res.status(404).json({ message: "Kullanıcı bulunamadı" });
+  if (role === "agent") {
+    const existingAgent = await storage.getAgentByUserId(id);
+    if (!existingAgent) {
+      await storage.createAgent({ userId: id, companyName: "Mirhan Gayrimenkul", phone: phone || "", description: "" });
+    }
+  }
   const { password: _p, ...safe } = updated;
   return res.json(safe);
 });
