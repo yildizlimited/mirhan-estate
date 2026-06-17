@@ -71,21 +71,15 @@ export function Footer() {
             <h3 className="font-semibold mb-4">İletişim</h3>
             <ul className="space-y-3">
               <li>
-                <a href="https://maps.google.com/?q=Nişantaşı+Şişli+İstanbul" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://maps.google.com/?q=Cevizli+Mah+Harput+Sk+Mutlu+Apt+Kartal+İstanbul" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                  Nişantaşı, Şişli/İstanbul
+                  Cevizli Mah. Harput Sk. Mutlu Apt. No:2/C Kartal/İstanbul
                 </a>
               </li>
               <li>
                 <a href="tel:+905494492336" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  +90 549 449 23 36
-                </a>
-              </li>
-              <li>
-                <a href="tel:+902121234567" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
-                  +90 212 123 45 67
+                  0549 449 23 36
                 </a>
               </li>
               <li>

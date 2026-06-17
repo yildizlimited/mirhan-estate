@@ -59,13 +59,13 @@ export default function ContactPage() {
                 {
                   icon: MapPin,
                   title: "Adres",
-                  lines: ["Nişantaşı Mahallesi", "Şişli / İstanbul"],
-                  link: "https://maps.google.com/?q=Nişantaşı+Şişli+İstanbul",
+                  lines: ["Cevizli Mah. Harput Sk. Mutlu Apt. No:2/C", "Kartal / İstanbul"],
+                  link: "https://maps.google.com/?q=Cevizli+Mah+Harput+Sk+Mutlu+Apt+Kartal+İstanbul",
                 },
                 {
                   icon: Phone,
                   title: "Telefon",
-                  lines: ["+90 549 449 23 36 (Mobil)", "+90 212 123 45 67 (Ofis)"],
+                  lines: ["0549 449 23 36"],
                   link: "tel:+905494492336",
                 },
                 {
@@ -172,19 +172,19 @@ export default function ContactPage() {
         <h2 className="text-xl font-bold mb-4 text-center" data-testid="text-map-title">Ofisimizin Konumu</h2>
         <div className="rounded-xl overflow-hidden border border-border shadow-sm">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.6!2d28.9985!3d41.0475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAyJzUxLjAiTiAyOMKwNTknNTQuNiJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str&q=Nişantaşı+Şişli+İstanbul"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.0!2d29.1850!3d40.9170!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU1JzAxLjIiTiAyOcKwMTEnMDYuMCJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str&q=Cevizli+Mah+Harput+Sk+Kartal+İstanbul"
             width="100%"
             height="400"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Mirhan Gayrimenkul Ofis Konumu - Nişantaşı, Şişli/İstanbul"
+            title="Mirhan Gayrimenkul Ofis Konumu - Cevizli, Kartal/İstanbul"
             data-testid="map-office-location"
           />
         </div>
         <p className="text-sm text-muted-foreground text-center mt-3">
-          Nişantaşı, Şişli/İstanbul
+          Cevizli Mah. Harput Sk. Mutlu Apt. No:2/C, Kartal/İstanbul
         </p>
       </section>
 
